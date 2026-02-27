@@ -1,52 +1,67 @@
 import Hero from "@/components/home/Hero";
 import FeaturedNews from "@/components/home/FeaturedNews";
 import Features from "@/components/home/Features";
-import OrderBook from "@/components/home/OrderBook";
 import MarketStats from "@/components/home/MarketStats";
+import MarketSummary from "@/components/home/MarketSummary";
+import IndicatorsStrategies from "@/components/home/IndicatorsStrategies";
+import BrokerPartners from "@/components/home/BrokerPartners";
+import MarketDataTerminal from "@/components/home/MarketDataTerminal";
 
 export default function Home() {
   return (
-    <div className="space-y-32 pb-32">
+    <div className="space-y-0 pb-32">
       <Hero />
 
-      {/* Live Market Terminal Section */}
-      <section className="container mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-2">
-            <FeaturedNews />
-          </div>
-          <div className="lg:col-span-1">
-            <OrderBook />
-          </div>
-        </div>
-      </section>
+      {/* Market Summary Feed */}
+      <MarketSummary />
 
-      <div className="container mx-auto px-6">
-        <MarketStats />
+      <MarketDataTerminal />
+
+      {/* Community Ideas Section */}
+      <div className="bg-[#0A1628]/50 py-24 pb-32">
+        <FeaturedNews />
       </div>
 
+      {/* Scripting & Community */}
+      <IndicatorsStrategies />
+
+      {/* Execution Partners */}
+      <BrokerPartners />
+
+      {/* Technical Features */}
       <Features />
 
-      {/* CTA Section */}
-      <section className="container mx-auto px-6">
-        <div className="relative glass p-12 md:p-24 rounded-[3rem] overflow-hidden border border-primary/20 bg-black/60">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] -mr-40 -mt-20" />
-          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16 text-center lg:text-left">
-            <div>
-              <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter uppercase leading-[0.9]">
-                Initiate <br />
-                <span className="text-primary">Execution.</span>
-              </h2>
-              <p className="text-muted-foreground text-xl max-w-xl font-medium">
-                Enter the future of high-frequency finance. Deploy your capital with the precision of NeonByte Capital AI.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-              <button className="px-12 py-6 bg-white text-black rounded-2xl font-black text-2xl hover:bg-primary hover:text-white transition-all hover:neon-glow uppercase tracking-tighter">
-                Get Started Now
+      {/* Infrastructure Status */}
+      <div className="container mx-auto px-6 py-20 border-t border-white/5">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="max-w-md">
+            <h4 className="text-xl font-black uppercase italic tracking-tighter mb-4">Institutional Resilience</h4>
+            <p className="text-slate-500 text-sm">Deployed on global edge infrastructure with AES-256 military-grade encryption and ISO-27001 compliance standards.</p>
+          </div>
+          <div className="flex-1 w-full">
+            <MarketStats />
+          </div>
+        </div>
+      </div>
+
+      {/* Final Global CTA */}
+      <section className="container mx-auto px-6 mt-32">
+        <div className="relative glass p-16 md:p-32 rounded-[4rem] overflow-hidden border border-primary/20 bg-[#0D1B2D]">
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[160px] -mr-60 -mt-40" />
+          <div className="relative z-10 text-center max-w-4xl mx-auto">
+            <h2 className="text-6xl md:text-8xl font-black mb-12 tracking-tighter uppercase leading-[0.8] italic">
+              Empower your <br />
+              <span className="gradient-text">Future.</span>
+            </h2>
+            <p className="text-slate-400 text-xl md:text-2xl mb-16 font-medium leading-relaxed">
+              Join 100 million futures. The most powerful terminal for the world's most demanding traders.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <button className="px-16 py-6 bg-white text-black rounded-2xl font-black text-2xl hover:bg-primary hover:text-white transition-all hover:neon-glow uppercase tracking-tighter italic">
+                Get Started
               </button>
-              <button className="px-12 py-6 glass border border-white/10 rounded-2xl font-black text-2xl hover:bg-white/10 transition-all uppercase tracking-tighter">
-                Institutional
+              <button className="px-16 py-6 glass border border-white/10 rounded-2xl font-black text-2xl hover:bg-white/10 transition-all uppercase tracking-tighter italic">
+                View Brokers
               </button>
             </div>
           </div>

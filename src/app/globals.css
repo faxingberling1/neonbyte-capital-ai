@@ -105,6 +105,28 @@
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-gradient;
   }
+
+  /* Optimized Ticker Animation */
+  @keyframes ticker-marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  .animate-ticker {
+    display: flex;
+    width: max-content;
+    animation: ticker-marquee 120s linear infinite;
+    will-change: transform;
+  }
+
+  .animate-ticker:hover {
+    animation-play-state: paused;
+  }
 }
 
 

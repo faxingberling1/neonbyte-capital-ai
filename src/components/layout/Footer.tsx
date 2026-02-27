@@ -5,47 +5,57 @@ const Footer = () => {
     return (
         <footer className="bg-background border-t border-border py-12">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-                    <div className="space-y-4">
+                <div className="grid grid-cols-2 md:grid-cols-5 gap-12">
+                    <div className="col-span-2 md:col-span-1 space-y-4">
                         <Link href="/" className="flex items-center space-x-2">
                             <div className="w-8 h-8 bg-primary rounded flex items-center justify-center">
                                 <TrendingUp className="text-white w-5 h-5" />
                             </div>
-                            <span className="text-xl font-bold gradient-text">NeonByte Capital AI</span>
+                            <span className="text-xl font-bold gradient-text">NeonByte</span>
                         </Link>
-                        <p className="text-sm text-muted-foreground">
-                            Intelligent market analysis and investment management powered by Next-Gen AI.
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                            Where the world does markets. Global terminals for institutional and retail intelligence.
                         </p>
                     </div>
 
                     <div>
-                        <h4 className="font-bold mb-4">Platform</h4>
-                        <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li><Link href="/news">News</Link></li>
-                            <li><Link href="/insights">Market Insights</Link></li>
-                            <li><Link href="/investments">Investments</Link></li>
+                        <h4 className="text-[10px] font-black uppercase tracking-widest mb-6">Products</h4>
+                        <ul className="space-y-3 text-xs text-muted-foreground">
+                            <li><Link href="/charts" className="hover:text-primary transition-colors">Supercharts</Link></li>
+                            <li><Link href="/screeners" className="hover:text-primary transition-colors">Screeners</Link></li>
+                            <li><Link href="/pine" className="hover:text-primary transition-colors">Pine Script</Link></li>
+                            <li><Link href="/desktop" className="hover:text-primary transition-colors">Desktop App</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-bold mb-4">Company</h4>
-                        <ul className="space-y-2 text-sm text-muted-foreground">
-                            <li><Link href="/about">About Us</Link></li>
-                            <li><Link href="/compliance">Compliance</Link></li>
-                            <li><Link href="/contact">Support</Link></li>
+                        <h4 className="text-[10px] font-black uppercase tracking-widest mb-6">Community</h4>
+                        <ul className="space-y-3 text-xs text-muted-foreground">
+                            <li><Link href="/community" className="hover:text-primary transition-colors">Shared Ideas</Link></li>
+                            <li><Link href="/wizards" className="hover:text-primary transition-colors">Wizards</Link></li>
+                            <li><Link href="/scripts" className="hover:text-primary transition-colors">Indicators</Link></li>
+                            <li><Link href="/house-rules" className="hover:text-primary transition-colors">House Rules</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4 className="font-bold mb-4">Newsletter</h4>
-                        <div className="flex space-x-2">
-                            <input
-                                type="email"
-                                placeholder="email@example.com"
-                                className="bg-muted border-none rounded-lg px-4 py-2 text-sm w-full focus:ring-1 ring-primary"
-                            />
-                            <button className="bg-primary px-4 py-2 rounded-lg text-sm font-bold">Join</button>
-                        </div>
+                        <h4 className="text-[10px] font-black uppercase tracking-widest mb-6">Markets</h4>
+                        <ul className="space-y-3 text-xs text-muted-foreground">
+                            <li><Link href="/markets/stocks" className="hover:text-primary transition-colors">Stocks</Link></li>
+                            <li><Link href="/markets/crypto" className="hover:text-primary transition-colors">Crypto</Link></li>
+                            <li><Link href="/markets/forex" className="hover:text-primary transition-colors">Forex</Link></li>
+                            <li><Link href="/markets/indices" className="hover:text-primary transition-colors">Indices</Link></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-[10px] font-black uppercase tracking-widest mb-6">Company</h4>
+                        <ul className="space-y-3 text-xs text-muted-foreground">
+                            <li><Link href="/about" className="hover:text-primary transition-colors">About</Link></li>
+                            <li><Link href="/news" className="hover:text-primary transition-colors">Blog</Link></li>
+                            <li><Link href="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
+                            <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+                        </ul>
                     </div>
                 </div>
 

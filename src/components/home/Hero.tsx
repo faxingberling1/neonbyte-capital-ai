@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart3, ShieldCheck, Zap, TrendingUp, Activity, Terminal } from "lucide-react";
+import { ArrowRight, BarChart3, ShieldCheck, Zap, TrendingUp, Activity, Rocket, Search } from "lucide-react";
 import Link from "next/link";
 import MarketChart from "./MarketChart";
 
@@ -15,60 +15,48 @@ const Hero = () => {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
+                        className="text-center lg:text-left"
                     >
-                        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 mb-8">
-                            <Terminal className="w-3 h-3 text-primary" />
+                        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/30 mb-8 mx-auto lg:mx-0">
+                            <Rocket className="w-3 h-3 text-primary" />
                             <span className="text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
-                                Advanced Trading Terminal v3.0
+                                $0 forever, no credit card needed
                             </span>
                         </div>
 
-                        <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 leading-[0.9] uppercase">
-                            Predict. <br />
-                            <span className="gradient-text">Execute.</span> <br />
-                            Dominate.
+                        <h1 className="text-6xl md:text-[5.5rem] font-black tracking-tighter mb-8 leading-[0.85] uppercase">
+                            Where the <br />
+                            world does <br />
+                            <span className="gradient-text">markets.</span>
                         </h1>
 
-                        <p className="max-w-md text-lg text-muted-foreground mb-10 leading-relaxed font-medium">
-                            Join the elite. Harness neural-network driven market insights and high-frequency execution tools for Forex and Crypto.
+                        <p className="max-w-xl text-xl text-muted-foreground mb-12 leading-relaxed font-medium mx-auto lg:mx-0">
+                            Join 100 million traders and investors taking the future into their own hands. The best trades require research, then commitment.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
                             <Link
                                 href="/auth/signup"
-                                className="w-full sm:w-auto px-8 py-4 bg-primary text-white rounded-xl font-bold text-lg hover:neon-glow transition-all flex items-center justify-center group"
+                                className="w-full sm:w-auto px-12 py-5 bg-primary text-white rounded-xl font-black text-xl hover:neon-glow transition-all flex items-center justify-center group uppercase tracking-tighter"
                             >
-                                Open Terminal
-                                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                                Get started
+                                <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                             </Link>
-                            <div className="flex items-center space-x-4 text-sm font-bold text-foreground/60 uppercase tracking-widest">
-                                <div className="flex -space-x-2">
-                                    {[1, 2, 3].map(i => (
-                                        <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-zinc-800 flex items-center justify-center overflow-hidden">
-                                            <div className="w-full h-full bg-gradient-to-br from-primary to-secondary opacity-50" />
-                                        </div>
-                                    ))}
-                                </div>
-                                <span>4.2k Active Now</span>
-                            </div>
+                            <Link
+                                href="/features"
+                                className="text-sm font-black uppercase tracking-widest text-slate-400 hover:text-white transition-colors"
+                            >
+                                Explore features
+                            </Link>
                         </div>
 
-                        <div className="mt-12 grid grid-cols-3 gap-6 border-t border-white/5 pt-8">
-                            <div>
-                                <span className="block text-xs text-muted-foreground uppercase mb-1">Execution Speed</span>
-                                <span className="text-xl font-mono font-bold text-secondary">0.02ms</span>
-                            </div>
-                            <div>
-                                <span className="block text-xs text-muted-foreground uppercase mb-1">Pairs Supported</span>
-                                <span className="text-xl font-mono font-bold">250+</span>
-                            </div>
-                            <div>
-                                <span className="block text-xs text-muted-foreground uppercase mb-1">AI Accuracy</span>
-                                <span className="text-xl font-mono font-bold text-primary">94.8%</span>
-                            </div>
+                        <div className="mt-16 flex items-center justify-center lg:justify-start gap-8 opacity-40">
+                            <span className="text-[10px] font-black uppercase tracking-[0.3em]">Institutional Grade</span>
+                            <span className="text-[10px] font-black uppercase tracking-[0.3em]">SEC Regulated</span>
+                            <span className="text-[10px] font-black uppercase tracking-[0.3em]">256-Bit Secured</span>
                         </div>
                     </motion.div>
 
